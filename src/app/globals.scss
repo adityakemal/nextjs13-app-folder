@@ -1,13 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
-
-* {
-  font-family: "Tilt Neon", sans-serif;
-}
-
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
 
+$font-main: var(--font-young);
+$font-secondary: var(--font-pixel);
+
+* {
+  font-family: $font-main;
+}
+
+h1 {
+  font-family: $font-secondary;
+  font-size: 50px;
+}
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -31,7 +36,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
-
 main {
   // font-size: 24px;
 }

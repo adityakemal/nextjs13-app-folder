@@ -1,9 +1,19 @@
 // import { useState } from "react";
+import ReduxProvider from "@/lib/ReduxProvider";
 import NavbarCustom from "../components/NavbarCustom";
 import "./globals.scss";
-import { Inter } from "next/font/google";
+import { Young_Serif, Pixelify_Sans } from "next/font/google";
+// import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Young_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-young",
+});
+const pixel = Pixelify_Sans({
+  subsets: ["latin"],
+  variable: "--font-pixel",
+});
 
 export const metadata = {
   title: "title global",
@@ -13,22 +23,19 @@ export const metadata = {
   },
 };
 
+// const myfont = localFont({src : './'})
+
 export default function RootLayout({ children }) {
   // const [count, setCount] = useState(0);
 
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <NavbarCustom />
-        {/* <h1>LAYOUT STATE {count}</h1>
-        <button
-          className="bg-green-400 p-2"
-          onClick={() => setCount((v) => v + 1)}
-        >
-          klik layoutstate
-        </button> */}
-        <main>{children}</main>
-      </body>
+      <ReduxProvider>
+        <body className={`${inter.variable}  ${pixel.variable}`}>
+          <NavbarCustom />
+          <main>{children}</main>
+        </body>
+      </ReduxProvider>
     </html>
   );
 }

@@ -2,10 +2,12 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
+import { useSelector } from "react-redux";
 
 export default function NavbarCustom() {
   const pathname = usePathname();
   const router = useRouter();
+  const { count } = useSelector((state) => state.home);
 
   const handlelogout = () => {
     router.push("/login");
@@ -23,7 +25,7 @@ export default function NavbarCustom() {
   return (
     !disableRoute.includes(pathname) && (
       <nav className="flex items-center justify-between px-6 h-[60px] bg-blue-400">
-        <span>logo</span>
+        <span>logo - {count}</span>
         <ul className="m-0 p-0 flex items-center ">
           {routes.map((res, i) => (
             <li
