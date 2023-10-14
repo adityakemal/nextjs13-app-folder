@@ -5,6 +5,11 @@ import Link from "next/link";
 
 // FETCHING WITH SERVER SIDE
 
+export const metadata = {
+  title: "Product",
+  description: "my product page",
+};
+
 async function getData() {
   try {
     // const res = await axios.get("https://fakestoreapi.com/products");
