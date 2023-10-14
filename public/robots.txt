@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /register
+Disallow: /about/
+
+Sitemap: https://www.kadityaz.me/sitemap.xml
