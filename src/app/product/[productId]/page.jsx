@@ -9,6 +9,10 @@ export const generateMetadata = async ({ params }) => {
   return {
     title: data.title,
     description: data.description,
+    openGraph: {
+      images: [data.image],
+      type: "website",
+    },
   };
 };
 
@@ -41,6 +45,11 @@ export default async function pageDetailProduct({ params }) {
   console.log(product, "product");
   return (
     <div>
+      {/* <Head>
+        <link property="og:image" content={product.image} />
+        <meta property="og:type" content="website"></meta>
+      </Head> */}
+      ////
       <h1 className="text-40">get data with serverside props</h1>
       <pre>{JSON.stringify(product, 0, 2)}</pre>;
     </div>
