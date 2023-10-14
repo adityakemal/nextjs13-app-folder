@@ -1,0 +1,19 @@
+{
+  "/_not-found": "/_not-found",
+  "/page": "/",
+  "/about/page": "/about",
+  "/api/route": "/api",
+  "/product/page": "/product",
+  "/(auth)/register/page": "/register",
+  "/about/[...slug]/page": "/about/[...slug]",
+  "/(auth)/login/page": "/login",
+  "/api/revalidate/route": "/api/revalidate",
+  "/api/product/route": "/api/product",
+  "/product/[productId]/page": "/product/[productId]",
+  "/profile/page": "/profile",
+  "/profile/[idProfile]/page": "/profile/[idProfile]",
+  "/api/auth/login/route": "/api/auth/login",
+  "/(admin)/dashboard/page": "/dashboard",
+  "/(admin)/dashboard/@payment/page": "/dashboard",
+  "/(admin)/dashboard/@analytic/page": "/dashboard"
+}
